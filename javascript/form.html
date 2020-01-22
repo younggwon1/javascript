@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        </script>
+    </head>
+    <body>
+        <!-- 
+            POST : 클라이언트가 입력한 내용을 서버에 전달할 때 사용(가입, 저장) 
+                    request body
+            GET : 사용자가 서버의 resource를 요청할 때 사용
+                    웹 브라우저 -> URL요청
+         -->
+        <form action="regist.html" method="POST">
+            이름 : <input type="text" name="name" placeholder="이름을 입력하세요">
+            <br/>
+            아이디 : <input type="text" name="id" placeholder="아이디를 입력하세요">
+            <br/>
+            비밀번호 : <input type="password" name="pwd" placeholder="비밀번호를 입력하세요">
+            <br/>
+            
+            남성 : <input type="radio" name="gender">
+            여성 : <input type="radio" name="gender">
+            <br/>
+
+            사용하는 SNS : 
+            <input type="checkbox" name="sns"> Facebook
+            <input type="checkbox" name="sns"> Instargram
+            <input type="checkbox" name="sns"> Google
+            <br/>
+
+            연령 : 
+            <select name="age">
+                <option value="10">10대</option>
+                <option value="20">20대</option>
+                <option value="30">30대</option>
+            </select>
+            <br/>
+
+            사진 : 
+            <input type="file" name="profile">    
+            <br/>
+            
+            자기소개
+            <textarea name="intro">
+
+            </textarea>
+            <br/>
+
+            <input type="submit" value="회원 가입">
+            <input type="reset" value="초기화">
+            <input type="button" value="임시 저장">           
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+   
+            let korean = prompt("국어 점수를 입력하세요."); //string
+            let english = prompt("영어 점수를 입력하세요."); //string
+            let math = prompt("수학 점수를 입력하세요."); //string
+
+            let covertekorean = Number(korean)
+            let coverteenglish = Number(english)
+            let covertemath = Number(math)
+
+            let result = (covertekorean + coverteenglish + covertemath)/3;
+
+            console.log("result=" + result); // string + number = string
+
+
+            switch(true){
+                case result>=80:
+                console.log("수 입니다");
+                break;
+                case result>=60&&result<80:
+                console.log("우 입니다");
+                break;
+                case result>=40&&result<60:
+                console.log("미 입니다");
+                break;
+                case result>=20&&result<40:
+                console.log("양 입니다");
+                break;
+                default:
+                console.log("가 입니다");
+                break;
+            }
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

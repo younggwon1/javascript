@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let comNum = Math.floor(Math.random() * 100);
+            for(let i=1; i<=100; i++){
+                let userNum = Number(prompt("당신의" + i + "번째 예측 숫자는??"));
+
+                if(comNum > userNum){
+                    alert("보다 큰 수를 입력해 주세요");
+                }
+                else if(comNum < userNum){
+                    alert("보다 작은 수를 입력해 주세요");
+                }
+                else{
+                    alert("정답입니다."); 
+                    break;
+                }
+                console.log(comNum)
+            }
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
