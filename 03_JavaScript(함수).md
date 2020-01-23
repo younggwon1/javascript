@@ -130,5 +130,40 @@ function 함수() {
 
 ---
 
-### 매개변수
+### 
+
+### 타이머 변수
+
+- setTimeout : 일정시간 후 함수를 한 번 실행한다. 
+- setInterval : 일정 시간마다 함수를 반속해서 실행한다.
+- clearTimeout : 일정 시간 후 함수를 한 번 실행하는 것을 중지한다.
+- clearInterval : 일정 시간마다 함수를 반복하는 것을 중단한다.
+
+
+
+### 코드 실행 함수
+
+> 문자열을 코드로 실행할 수 있는 특별한 함수, **eval(string)**
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let  willeval = "";
+            willeval += "var number = 10;";
+            willeval += "console.log(number);";
+
+            eval(willeval);
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
+
+-> 10
+```
 
