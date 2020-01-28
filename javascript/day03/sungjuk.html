@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let student = [];
+            student.push({이름:'aaa',국어:90,수학:50,영어:10});
+            student.push({이름:'bbb',국어:85,수학:60,영어:20});
+            student.push({이름:'ccc',국어:70,수학:70,영어:30});
+            student.push({이름:'ddd',국어:65,수학:80,영어:40});
+            student.push({이름:'eee',국어:60,수학:90,영어:50});
+
+
+            for (let i in student){
+
+                student[i].sum = student[i].국어 + student[i].수학 + student[i].영어;
+                student[i].avg = student[i].sum /3;
+            }
+            for (let i in student){
+                with(student[i]){
+                    console.log(이름 + ':' + '총점 : ' + sum + '/' + '평균 : ' + avg);
+
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!-- 정적 -->
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let school = {
+                name: '멀티캠퍼스',
+                capacity: [30,30,30],
+                grade: '3',
+                event: function(month, eventName){
+                    console.log(this.name + ' ' + month + " 달에 " + eventName + "행사가 있습니다.");
+                }
+            };
+
+            console.log(school.name);
+            school.event("1월","졸업식");
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

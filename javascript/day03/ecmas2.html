@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let array = [50,90,27,2,58,34,23,6,56,84];
+
+
+            let grade = array.map(function(element){
+                if (element>=0&&element<20){
+                    return "F"
+                }
+                else if (element>=20&&element<40){
+                    return "D"
+                }
+                else if (element>=40&&element<60){
+                    return "C"
+                }
+                else if (element>=60&&element<80){
+                    return "B"
+                }
+                else{
+                    return "A"
+                }
+
+
+            });
+
+            for (let i=0; i<array.length; i++){
+                console.log(array[i] + "=>" + grade[i]);
+            }
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

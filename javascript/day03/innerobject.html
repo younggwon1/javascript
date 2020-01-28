@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let objectNumber = new Number(273); //속성, 메소드 추가 o
+            let primitiviNumber = 273; //속성, 메소드 추가 x
+
+            Number.prototype.method = function(){
+                return "Method on prototype";
+            };
+
+            console.log("primitive: " + primitiviNumber);
+            console.log("object: " + objectNumber + "/" + objectNumber.method());
+
+            
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let jumsu = [1,2,3,4,5];
+
+            let result = jumsu.reduce(function(preValue, curValue, index, array){
+                console.log(preValue);
+                console.log(curValue);
+                console.log(index);
+                console.log(array);
+                console.log("----------------------");
+                return preValue + curValue;
+            });
+
+            console.log(result);
+
+        </script>
+
+
+    </head>
+    <body>
+
+    </body>
+</html>

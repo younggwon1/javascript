@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let myobject1 = new Object();
+            let myobject2 = {};
+
+            console.log(myobject1);
+            console.log(myobject1.toString());
+
+            //toString() 재정의 (overriding, 함수의 내용을 재정의)
+            let student = {
+                name: '홍길동',
+                grade: '1학년',
+                toString: function(){
+                    return this.name + "/" + this.grade;
+                }
+            }
+            
+            console.log('student:' + student)
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let json = `{
+                "id" : 12345,
+                "account" : "123-4567-8899",
+                "name" : "영권",
+                "balance" : 1000,
+                "lastTxDate" : "2020-01-20"
+            }`;
+
+            let parsedJson = JSON.parse(json);
+            console.log(parsedJson);
+            console.log(typeof(parsedJson));
+            console.log(parsedJson.name + "/" + parsedJson.balance)
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

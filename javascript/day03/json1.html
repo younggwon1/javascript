@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            let json = {
+                "id" : 12345,
+                "account" : "123-4567-8899",
+                "name" : "영권",
+                "balance" : 1000,
+                "lastTxDate" : "2020-01-20"
+            };
+
+            let stringJson = JSON.stringify(json);
+            console.log(stringJson); // 다른 서비스(서버)에 전달 가능
+            console.log(typeof(stringJson));
+            console.log(stringJson.name + "/" + stringJson.balance)
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
