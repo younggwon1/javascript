@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            window.onload = () => {
+                let counter = document.getElementById("counter");
+                let plusbtn = document.getElementById("plus");
+
+                plusbtn.onclick = function() {
+                    counter.innerText ++;
+                }
+
+
+                let minusbtn = document.getElementById("minus");
+                minusbtn.onclick = function() {
+                    counter.innerText --;
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <h1 id="counter">0</h1>
+        <button id="plus" onclick="plusCounter()">+</button>
+        <button id="minus">-</button>
+    </body>
+</html>

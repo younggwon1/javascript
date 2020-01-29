@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            window.onload = function() {
+                let _ul = document.createElement("ul");
+                let _li1 = document.createElement("li");
+                let _li2 = document.createElement("li");
+                let _naver = document.createTextNode("naver");
+                let _daum = document.createTextNode("daum");
+
+                _li1.appendChild(_naver);
+                _li2.appendChild(_daum);
+
+                _ul.appendChild(_li1);
+                _ul.appendChild(_li2);
+
+                document.body.appendChild(_ul);
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1>link</h1>
+    </body>
+</html>

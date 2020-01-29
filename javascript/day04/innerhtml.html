@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            window.onload = function() {
+                //img 태그 추가
+
+                let myImg = document.createElement("img");
+                myImg.src = "googlelogo.png";
+                myImg.width = 400;
+                myImg.height = 250;
+
+
+
+                document.body.appendChild(myImg);
+                // document.body.innerHTML = "<h1 style='color: blue;'>Hello, my world</h1>";
+                let div1 = document.getElementById("mydiv1");
+
+                div1.innerText = "<h1 style='color: blue;'>Hello, my world</h1>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1>innerHTML</h1>
+
+        <div id="mydiv1">
+            ~~~ here
+        </div>
+
+    </body>
+</html>
