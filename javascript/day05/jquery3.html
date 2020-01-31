@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--<script src="../jquery/jquery.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('input[type="text"]').val('test value');
+                $('#btn1').on('click',function(){
+                    console.log($("#input1").val());
+                    console.log($("#input2").val());
+                    console.log($("#input3").val());
+                    console.log($("#input4").val());
+                    console.log($("#input5").val());
+                    console.log($("#input6").val());
+                })
+            });
+
+            setTimeout(function(){
+                let selectedItem = $("select > option:selected").val();
+                let checkedRadio1 = $("#input3:checked").val();
+                let checkedRadio2 = $("#input7:checked").val();
+                let checkedCheckbox = $("#input4:checked").val();
+                console.log(selectedItem + "/" + checkedRadio1 + "/" + checkedRadio2 + "/" + checkedCheckbox);
+            }, 5000);
+
+            console.log($('input[name="gender"]:checked').val());
+        </script>
+
+    </head>
+    <body>
+        입력필드(일반1) : <input id="input1" type="text">  <br/>
+        입력필드(일반2) : <input id="input5" type="text">  <br/>
+        입력필드(비밀번호) : <input id="input2" type="password">  <br/>
+        라디오(남성) : <input id="input3" type="radio" name="gender" value="m">  <br/>
+        라디오(여성) : <input id="input7" type="radio" name="gender" value="f">  <br/>
+        체크박스 : <input id="input4" type="checkbox">  <br/>
+        <!--파일 : <input id="input5" type="file">  <br/>-->
+        히든(숨김) : <input id="input6" type="hidden">  <br/>
+
+
+        <select id="myselect">
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+            <option value="orange">오렌지</option>
+            <option value="키위">kiwwi</option>
+        </select>
+        <button type="button" id="btn1">전송</button>
+
+    </body>
+</html>

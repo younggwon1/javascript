@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--<script src="../jquery/jquery.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                $.ajax({
+                    url: "http://api.openweathermap.org/data/2.5/forecast",
+                    method: "GET",
+                    data: {
+                        q: "seoul",
+                        APPID:"da2990f54bae2cfa73059c88df0290a2",
+                        units:"metric"
+                    },
+                    success: function(data){
+                        //let parsed = JSON.parse(data);
+                        $.each(data.list, function(index, item) {
+                        let _image = document.createElement("img");
+                        _image.src = "http://openweathermap.org/img/wn/" 
+                        + item.weather[0].icon +"@2x.png";
+
+                        let _divhtml = item.dt_txt;
+                        _divhtml += ", 기온:" + item.main.temp;
+                        _divhtml += " <span style='color:blue;'>" + item.main.temp_min + "</span>";
+                        _divhtml += "/<span style='color:red;'>" + item.main.temp_max + "</span>";
+                        _divhtml += ", " + item.weather[0].description;
+
+                        let imageSpan = document.createElement("span");
+                        imageSpan.appendChild(_image);
+                        let infoSpan = document.createElement("span");
+                        infoSpan.innerHTML = _divhtml;
+
+                        let div = document.createElement("div");
+                        div.appendChild(imageSpan);
+                        div.appendChild(infoSpan);
+
+                        $('#contents').append(div);
+                        });
+                    } 
+
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="contents"></div>
+    </body>
+</html>

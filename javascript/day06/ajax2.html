@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--<script src="../jquery/jquery.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                    $.ajax({
+                        url: "https://poloniex.com/public",
+                        data:{
+                            'command': "returnChartData",
+                            'currencyPair': "USDT_BTC",
+                            'start': "1577840203",
+                            'end': "9999999999",
+                            'period': "86400",
+                        },
+
+                        type: "GET",
+                        success: function (data) {
+                            $.each(data, function (index, item) {
+                                let _divhtml = item.date;
+
+                                _divhtml += " <span style='color:blue;'>" + item.high + "</span>";
+                                _divhtml += "/<span style='color:red;'>" + item.low + "</span>";
+                                _divhtml += ", " + item.quoteVolume;
+
+                            
+                                let infoSpan = document.createElement("span");
+                                infoSpan.innerHTML = _divhtml;
+
+                                let div = document.createElement("div");
+                               
+                                div.appendChild(infoSpan);
+
+
+                                $('#contents').append(div);
+                            })
+                        }
+                    });
+
+
+                });
+        </script>
+
+    </head>
+    <body>
+        <div id="contents"></div>
+    </body>
+</html>
